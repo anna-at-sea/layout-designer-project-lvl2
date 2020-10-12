@@ -1,0 +1,94 @@
+.artist-banner-background {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2
+}
+
+.artist-banner {
+    height: 545px;
+    background-image: url("../images/Morten Harket.png");
+    width: 100%;
+}
+
+.artist-banner-content {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 545 px;
+}
+
+.artist-name {
+    margin-top: 280px;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 70px;
+}
+
+.artist-fans {
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.flexbox {
+    display: flex;
+}
+
+.buttons-margin {
+    margin-top: 40px;
+}
+
+.btn-text-position {
+    align-items: center;
+}
+
+.btn-shape {
+    width: 200px;
+    height: 56px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-blue {
+    background-color: $mix-button;
+}
+
+.btn-red {
+    background-color: $selected-button;
+}
+
+.svg-prop {
+    filter: invert(100%);
+}
+
+.svg-position-blue {
+    margin-left: 19px;
+}
+
+.svg-position-red {
+    margin-left: 21px;
+}
+
+.text-prop {
+    font-weight: 400;
+    color: $main-text;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.text-position {
+    margin-left: 15px;
+}
+
+.btn-margin {
+    margin-left: 35px;
+}

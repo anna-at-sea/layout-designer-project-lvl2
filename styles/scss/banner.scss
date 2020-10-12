@@ -1,0 +1,78 @@
+.banner {
+    height: 865px;
+    background-image: url(../images/banner.png);
+    width: 100%;
+}
+
+.center {
+    @extend %flex-center;
+}
+
+.col {
+    @extend %column;
+}
+
+@mixin text-size ($font, $line) {
+    font-style: normal;
+    font-weight: bold;
+    font-size: $font;
+    line-height: $line;
+}
+
+@mixin text-position ($t) {
+    position: absolute;
+    top: $t;
+}
+
+.text-big {
+    @include text-size(60px, 70px);
+    margin-bottom: 10px;
+}
+
+.text-medium {
+    @include text-size(30px, 35px);
+    margin-bottom: 45px;
+}
+
+.text-small {
+    @include text-size(18px, 21px);
+    margin-bottom: 40px;
+}
+
+.text-form {
+    @include text-size(14px, 16px);
+    color: $main-text;
+}
+
+.text-box-style {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    height: 50px;
+    width: 270px;
+    padding-left: 20px;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-style {
+    background-color: $access-button;
+    height: 50px;
+    width: 570px;
+    border: none;
+}
+
+.banner-position {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

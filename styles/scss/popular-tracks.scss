@@ -1,0 +1,74 @@
+.tracks-section {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.header-styles {
+    font-weight: 700;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 45px;
+    color: $main-text;
+}
+
+.tracks {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    width: 1131.98px;
+    height: 200px;
+    justify-content: space-between;
+}
+
+.track {
+    display: flex;
+    width: 531.98px;
+    height: 50px;
+    cursor: pointer;
+}
+
+$icons: "Wild Seed", "Letter from Egypt", "Brother", "Wild Seed", "Letter from Egypt", "Out of My Hands";
+
+@mixin song-icon($i, $icon-name) {
+    .icon-#{$i} {
+        width: 55.3px;
+        height: 50px;
+        background-size: 55.3px 50px;
+        background-image: url("../images/#{$icon-name}.png");
+    }
+}
+
+@for $i from 1 through 6 {
+    @include song-icon ($i, nth($icons, $i));
+}
+
+.song-name {
+    margin-left: 16.59px;
+    margin-top: 7px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: $main-text;
+}
+
+.song-artist {
+    position: absolute;
+    margin-left: 71.89px;
+    margin-top: 28px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: $grey-text;
+}
+
+.song-duration {
+    position: absolute;
+    margin-left: 502.12px;
+    margin-top: 28px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: $news-text;
+}

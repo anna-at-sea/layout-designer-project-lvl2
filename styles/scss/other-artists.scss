@@ -1,0 +1,54 @@
+.other-artists-section {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.other-artists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.other-artist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    height: 317px;
+    cursor: pointer;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+$artists: "A-ha", "Tears for Fears", "Duran Duran", "Jack Savoretti", "Keane", "Frank Sinatra", "Paul Young", "Chris Rea";
+
+@mixin artist-cover($i, $artist) {
+    .artist-#{$i} {
+        width: 250px;
+        height: 250px;
+        background-size: 250px 250px;
+        background-image: url("../images/#{$artist}.png");
+    }
+}
+
+@for $i from 1 through 8 {
+    @include artist-cover ($i, nth($artists, $i));
+}
+
+.other-artist-name {
+    margin-top: 15px;
+    font-weight: 700px;
+    color: $main-text;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.num-of-fans {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $main-text;
+}

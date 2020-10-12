@@ -1,0 +1,53 @@
+.discography-section {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.albums {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.album {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 312px;
+    cursor: pointer;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+$album-covers: "Brother", "Out of My Hands", "Letter from Egypt", "Vogts Villa", "Wild Seed", "Poetenes Evangelium";
+
+@mixin album-cover($i, $album-cover) {
+    .cover-#{$i} {
+        width: 250px;
+        height: 250px;
+        background-size: 250px 250px;
+        background-image: url("../images/#{$album-cover}.png");
+    }
+}
+
+@for $i from 1 through 6 {
+    @include album-cover ($i, nth($album-covers, $i));
+}
+
+.album-name {
+    margin-top: 10px;
+    font-weight: 700px;
+    color: $main-text;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.album-year {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $main-text;
+}

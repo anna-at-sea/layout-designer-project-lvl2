@@ -1,0 +1,861 @@
+.banner {
+  height: 865px;
+  background-image: url(../images/banner.png);
+  width: 100%;
+}
+
+.text-big {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 70px;
+  margin-bottom: 10px;
+}
+
+.text-medium {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+  margin-bottom: 45px;
+}
+
+.text-small {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 40px;
+}
+
+.text-form {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+}
+
+.text-box-style {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+  border-radius: 3px;
+  margin-bottom: 30px;
+  height: 50px;
+  width: 270px;
+  padding-left: 20px;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-style {
+  background-color: #34C176;
+  height: 50px;
+  width: 570px;
+  border: none;
+}
+
+.banner-position {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-item {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.white {
+  color: #FFFFFF;
+}
+
+.grey {
+  color: #808080;
+}
+
+.search-box {
+  background-color: #3C3B3D;
+  border-radius: 50px;
+  border: none;
+  width: 264.1px;
+  height: 25.71px;
+  padding-left: 13.9px;
+}
+
+.header-position {
+  position: absolute;
+  width: 1200px;
+  height: 30px;
+  top: 25px;
+}
+
+.header-element-1 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.header-element-2 {
+  position: absolute;
+  left: 23.71px;
+  top: 3.4px;
+}
+
+.header-element-3 {
+  position: absolute;
+  left: 182px;
+  top: 4px;
+}
+
+.header-element-4 {
+  position: absolute;
+  left: 279.59px;
+  top: 4px;
+}
+
+.header-element-5 {
+  position: absolute;
+  left: 377.18px;
+  top: 4px;
+}
+
+.header-element-6 {
+  position: absolute;
+  left: 513.81px;
+  top: 4px;
+}
+
+.header-element-7 {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.grid {
+  display: grid;
+  width: 100vw;
+  grid-template-rows: repeat(5, auto);
+  row-gap: 100px;
+  grid-template-columns: 1fr 1200px 1fr;
+}
+
+.sub-text-big {
+  font-weight: bold;
+  font-size: 38px;
+}
+
+.sub-text-small {
+  font-size: 22px;
+  text-align: center;
+  line-height: 26px;
+}
+
+.pic1 {
+  background-image: url(../images/subscribe_1.png);
+  height: 580px;
+  width: 352px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pic2 {
+  background-image: url(../images/subscribe_2.png);
+  height: 580px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pic3 {
+  background-image: url(../images/subscribe_3.png);
+  height: 580px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-1 {
+  display: flex;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  height: 779px;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.price-row {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+}
+
+.main-text {
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: 24px;
+}
+
+.price-text-big {
+  font-size: 60px;
+  line-height: 70px;
+  margin-top: 223px;
+  margin-right: 11px;
+}
+
+.price-text-small {
+  font-size: 30px;
+  line-height: 35px;
+  margin-top: 230px;
+}
+
+.tiny-text {
+  font-size: 11px;
+  line-height: 13px;
+  margin-top: 35px;
+  text-align: center;
+}
+
+.btn-subscribe {
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: 40px;
+  width: 302px;
+  height: 70px;
+  border: 4px solid #FFFFFF;
+  color: #FFFFFF;
+  box-sizing: border-box;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.section-2 {
+  display: flex;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  height: 733px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.margin-top-50 {
+  margin-top: 50px;
+}
+
+.margin-top-70 {
+  margin-top: 70px;
+}
+
+.news-text-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 68px;
+  margin-right: 0;
+}
+
+.news-text-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 0;
+  margin-right: 68px;
+}
+
+.news-text-big {
+  font-size: 30px;
+  line-height: 35px;
+  color: #FFFFFF;
+  margin-top: 20px;
+}
+
+.news-text-small {
+  font-size: 14px;
+  line-height: 28px;
+  color: #8C8C8C;
+  margin-top: 25px;
+}
+
+.author {
+  display: flex;
+  flex-direction: row;
+  width: 221px;
+  height: 28px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.author-text {
+  font-size: 12px;
+  line-height: 28px;
+  color: #F89202;
+}
+
+.author-date {
+  font-size: 12px;
+  line-height: 28px;
+  color: #555555;
+}
+
+.line-1 {
+  width: 11px;
+  height: 1px;
+  background-color: #B8B8B8;
+  transform: rotate(90deg);
+}
+
+.btn-album {
+  width: 129.14px;
+  height: 50px;
+  border: 1px solid #E9E9E9;
+  box-sizing: border-box;
+  color: #8C8C8C;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 28px;
+  margin-top: 45px;
+}
+
+.section-3 {
+  display: flex;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  height: 322px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.app-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 50px;
+  justify-content: flex-start;
+}
+
+.app-text {
+  width: 566.23px;
+  margin-right: 209.6px;
+  margin-top: 32px;
+  color: #8C8C8C;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.margin-top-25 {
+  margin-top: 25px;
+}
+
+.btn-app {
+  width: 173.76px;
+  height: 50px;
+  border: none;
+  border-radius: 50px;
+  background-color: #FF4157;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.footer-background {
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  height: 486px;
+  background: linear-gradient(89.75deg, #5328A1 32.83%, #95390C 81.56%);
+}
+
+.footer-content {
+  display: flex;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  height: 486px;
+  flex-direction: column;
+}
+
+.footer-menu-1 {
+  width: 1020px;
+  display: flex;
+  margin-top: 80px;
+  justify-content: space-between;
+}
+
+.menu-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-header {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.column-item {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.social-net-icons {
+  display: flex;
+  width: 147px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.footer-line {
+  width: 100%;
+  height: 1px;
+  background-color: #EEEEEE;
+  margin-top: 367px;
+}
+
+.footer-menu-2 {
+  display: flex;
+  margin-top: 150px;
+  width: 534px;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.artist-banner-background {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.artist-banner {
+  height: 545px;
+  background-image: url("../images/Morten Harket.png");
+  width: 100%;
+}
+
+.artist-banner-content {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 545 px;
+}
+
+.artist-name {
+  margin-top: 280px;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 70px;
+}
+
+.artist-fans {
+  margin-top: 25px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.flexbox {
+  display: flex;
+}
+
+.buttons-margin {
+  margin-top: 40px;
+}
+
+.btn-text-position {
+  align-items: center;
+}
+
+.btn-shape {
+  width: 200px;
+  height: 56px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-blue {
+  background-color: #5328A1;
+}
+
+.btn-red {
+  background-color: #95390C;
+}
+
+.svg-prop {
+  filter: invert(100%);
+}
+
+.svg-position-blue {
+  margin-left: 19px;
+}
+
+.svg-position-red {
+  margin-left: 21px;
+}
+
+.text-prop {
+  font-weight: 400;
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.text-position {
+  margin-left: 15px;
+}
+
+.btn-margin {
+  margin-left: 35px;
+}
+
+.tracks-section {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.header-styles {
+  font-weight: 700;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 45px;
+  color: #FFFFFF;
+}
+
+.tracks {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  width: 1131.98px;
+  height: 200px;
+  justify-content: space-between;
+}
+
+.track {
+  display: flex;
+  width: 531.98px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.icon-1 {
+  width: 55.3px;
+  height: 50px;
+  background-size: 55.3px 50px;
+  background-image: url("../images/Wild Seed.png");
+}
+
+.icon-2 {
+  width: 55.3px;
+  height: 50px;
+  background-size: 55.3px 50px;
+  background-image: url("../images/Letter from Egypt.png");
+}
+
+.icon-3 {
+  width: 55.3px;
+  height: 50px;
+  background-size: 55.3px 50px;
+  background-image: url("../images/Brother.png");
+}
+
+.icon-4 {
+  width: 55.3px;
+  height: 50px;
+  background-size: 55.3px 50px;
+  background-image: url("../images/Wild Seed.png");
+}
+
+.icon-5 {
+  width: 55.3px;
+  height: 50px;
+  background-size: 55.3px 50px;
+  background-image: url("../images/Letter from Egypt.png");
+}
+
+.icon-6 {
+  width: 55.3px;
+  height: 50px;
+  background-size: 55.3px 50px;
+  background-image: url("../images/Out of My Hands.png");
+}
+
+.song-name {
+  margin-left: 16.59px;
+  margin-top: 7px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+}
+
+.song-artist {
+  position: absolute;
+  margin-left: 71.89px;
+  margin-top: 28px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #808080;
+}
+
+.song-duration {
+  position: absolute;
+  margin-left: 502.12px;
+  margin-top: 28px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #8C8C8C;
+}
+
+.discography-section {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.albums {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.album {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 312px;
+  cursor: pointer;
+  margin-right: 50px;
+  margin-top: 50px;
+}
+
+.cover-1 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 250px;
+  background-image: url("../images/Brother.png");
+}
+
+.cover-2 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 250px;
+  background-image: url("../images/Out of My Hands.png");
+}
+
+.cover-3 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 250px;
+  background-image: url("../images/Letter from Egypt.png");
+}
+
+.cover-4 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 250px;
+  background-image: url("../images/Vogts Villa.png");
+}
+
+.cover-5 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 250px;
+  background-image: url("../images/Wild Seed.png");
+}
+
+.cover-6 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 250px;
+  background-image: url("../images/Poetenes Evangelium.png");
+}
+
+.album-name {
+  margin-top: 10px;
+  font-weight: 700px;
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.album-year {
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+.other-artists-section {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+.other-artists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.other-artist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  height: 317px;
+  cursor: pointer;
+  margin-right: 50px;
+  margin-top: 50px;
+}
+
+.artist-1 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 250px;
+  background-image: url("../images/A-ha.png");
+}
+
+.artist-2 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 250px;
+  background-image: url("../images/Tears for Fears.png");
+}
+
+.artist-3 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 250px;
+  background-image: url("../images/Duran Duran.png");
+}
+
+.artist-4 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 250px;
+  background-image: url("../images/Jack Savoretti.png");
+}
+
+.artist-5 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 250px;
+  background-image: url("../images/Keane.png");
+}
+
+.artist-6 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 250px;
+  background-image: url("../images/Frank Sinatra.png");
+}
+
+.artist-7 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 250px;
+  background-image: url("../images/Paul Young.png");
+}
+
+.artist-8 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 250px;
+  background-image: url("../images/Chris Rea.png");
+}
+
+.other-artist-name {
+  margin-top: 15px;
+  font-weight: 700px;
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.num-of-fans {
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  color: #FFFFFF;
+  background-color: black;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+/*# sourceMappingURL=style.css.map */
