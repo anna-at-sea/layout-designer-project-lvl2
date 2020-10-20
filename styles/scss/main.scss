@@ -1,6 +1,15 @@
 .sub-text-big {
     font-weight: bold;
     font-size: 38px;
+    line-height: 45px;
+}
+
+@media(max-width:425px) {
+    .sub-text-big {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 23px;
+    }
 }
 
 .sub-text-small {
@@ -9,9 +18,17 @@
     line-height: 26px;
 }
 
-@mixin pic ($name, $width) {
+@media(max-width:425px) {
+    .sub-text-small {
+        font-size: 12px;
+        text-align: center;
+        line-height: 14px;
+    }
+}
+
+@mixin pic ($name, $width, $height) {
     background-image: url(../images/subscribe_#{$name}.png);
-    height: 580px;
+    height: $height;
     width: $width;
     display: flex;
     flex-direction: column;
@@ -19,15 +36,43 @@
 }
 
 .pic1 {
-    @include pic(1, 352px);
+    @include pic(1, 352px, 580px);
 }
 
 .pic2 {
-    @include pic(2, 350px);
+    @include pic(2, 350px, 580px);
 }
 
 .pic3 {
-    @include pic(3, 350px);
+    @include pic(3, 350px, 580px);
+}
+
+@media(max-width:1109px) {
+    .pic3 {
+        @include pic(3, 350px, 580px);
+        margin-top: 50px;
+    }
+}
+
+@media(max-width:759px) {
+    .pic2 {
+        @include pic(2, 350px, 580px);
+        margin-top: 50px;
+    }
+}
+
+@media(max-width:425px) {
+    .pic1 {
+        @include pic(1, 280px, 463px);
+    }
+    .pic2 {
+        @include pic(2, 280px, 464px);
+        margin-top: 50px;
+    }
+    .pic3 {
+        @include pic(3, 280px, 464px);
+        margin-top: 50px;
+    }
 }
 
 .section-1 {
@@ -36,7 +81,6 @@
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
-    height: 779px;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
@@ -44,9 +88,32 @@
 
 .flex-row {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     width: 100%;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+@media(min-width:1280px) {
+    .justify-sub {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media(max-width:1280px) {
+    .justify-sub {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media(max-width:759px) {
+    .justify-sub {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .price-row {
@@ -77,6 +144,8 @@
 .tiny-text {
     @include sub-window-text(11px, 13px, 35px);
     text-align: center;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .btn-subscribe {
@@ -90,15 +159,49 @@
     cursor: pointer;
 }
 
+@media(max-width:425px) {
+    .main-text {
+        @include sub-window-text(16px, 19px, 20px);
+    }
+    .price-text-big {
+        @include sub-window-text(60px, 70px, 167.57px);
+        margin-right: 11px;
+    }
+    .price-text-small {
+        @include sub-window-text(30px, 35px, 173.94px);
+    }
+    .tiny-text {
+        @include sub-window-text(11px, 13px, 41px);
+        text-align: center;
+    }
+    .btn-subscribe {
+        @include sub-window-text(12px, 14px, 40px);
+        width: 239px;
+        height: 55px;
+        border: 4px solid $main-text;
+        color: $main-text;
+        box-sizing: border-box;
+        background-color: transparent;
+        cursor: pointer;
+    }
+}
+
 .section-2 {
     display: flex;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
-    height: 733px;
     align-items: center;
     flex-direction: column;
+}
+
+.flex-row-2 {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: center;
 }
 
 .margin-top-50 {
@@ -107,6 +210,22 @@
 
 .margin-top-70 {
     margin-top: 70px;
+}
+
+@media (max-width:1234px) {
+    .margin-top-70 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+
+@media (max-width:1234px) {
+    .margin-top-50 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @mixin news-text($ml, $mr) {
@@ -123,6 +242,21 @@
 
 .news-text-left {
     @include news-text(0, 68px);
+}
+
+@media (max-width:1234px) {
+    .news-text-right {
+        @include news-text(0, 0);
+    }
+    .news-text-left {
+        @include news-text(0, 0);
+    }
+}
+
+@media (max-width:610px) {
+    .img-size {
+        width: 100%;
+    }
 }
 
 .news-text-big {
@@ -147,6 +281,12 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 16px;
+}
+
+@media (max-width:425px) {
+    .author {
+        width: 100%;
+    }
 }
 
 .author-text {
@@ -182,13 +322,18 @@
     margin-top: 45px;
 }
 
+@media (max-width:425px) {
+    .btn-album {
+        width: 100%;
+    }
+}
+
 .section-3 {
     display: flex;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 4;
     grid-row-end: 5;
-    height: 322px;
     align-items: center;
     flex-direction: column;
 }
@@ -199,6 +344,20 @@
     width: 100%;
     margin-top: 50px;
     justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+@media (max-width:1128px) {
+    .app-content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+
+@media (max-width:330px) {
+    .img-size-2 {
+        width: 100%;
+    }
 }
 
 .app-text {
@@ -208,6 +367,19 @@
     color: $news-text;
     font-size: 16px;
     line-height: 19px;
+}
+
+@media (max-width:1128px) {
+    .app-text {
+        margin-right: 0;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width:610px) {
+    .app-text {
+        width: 100%;
+    }
 }
 
 .margin-top-25 {
@@ -224,4 +396,10 @@
     cursor: pointer;
     font-size: 14px;
     line-height: 16px;
+}
+
+@media (max-width:425px) {
+    .btn-app {
+        width: 100%;
+    }
 }

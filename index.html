@@ -8,35 +8,45 @@
 </head>
 
 <body class="center">
-    <header class="menu-item header-position">
-        <img src="images/logo.svg" alt="logo" class="header-element-1" width="19.76px" height="17px">
-        <div class="white header-element-2">MUSIC BOX</div>
-        <a href="none" class="white header-element-3">ГЛАВНАЯ</a>
-        <a href="none" class="grey header-element-4">КАТАЛОГ</a>
-        <a href="none" class="grey header-element-5">ИСПОЛНИТЕЛИ</a>
-        <a href="none" class="grey header-element-6">КОНТАКТЫ</a>
-        <form class="header-element-7">
+
+    <main class="grid">
+
+    <div class="banner banner-position banner-height"></div>
+
+    <header class="menu-item header-position header-position-flex">
+        <div class="icon-and-menu">
+            <div class="icon-header">
+                <img src="images/logo.svg" alt="logo" width="19.76px" height="17px">
+                <div class="white icon-position">MUSIC BOX</div>
+            </div>
+            <div class="menu">
+                <a href="none" class="white menu-item-col">ГЛАВНАЯ</a>
+                <a href="none" class="grey menu-item-col">КАТАЛОГ</a>
+                <a href="none" class="grey menu-item-col">ИСПОЛНИТЕЛИ</a>
+                <a href="none" class="grey">КОНТАКТЫ</a>
+            </div>
+        </div>
+        <form>
             <input type="text" class="menu-item grey search-box" value="ПОИСК...">
         </form>
     </header>
 
-    <main class="grid">
-    <aside class="col banner-position banner">
+    <aside class="col banner-content-position banner-content-position-flex">
         <h1 class="text-big">ОНЛАЙН МУЗЫКА ГДЕ УГОДНО</h1>
         <h2 class="text-medium">БЕЗ ОГРАНИЧЕНИЙ</h2>
         <h3 class="text-small">Получите доступ всего за несколько шагов. Заполните форму ниже и откройте мир музыки</h3>
         <form class="col">
                 <div class="space-between">
-                    <input type="text" class="text-form text-box-style" value="Имя">
-                    <input type="text" class="text-form text-box-style" value="Email">
+                    <input type="text" class="text-form text-box-style text-box-size" value="Имя">
+                    <input type="text" class="text-form text-box-style text-box-size" value="Email">
                 </div>
-                <button class="text-form button-style">ПОЛУЧИТЬ ДОСТУП</button>
+                <button class="text-form button-style button-width">ПОЛУЧИТЬ ДОСТУП</button>
         </form>           
     </aside>
 
     <section class="section-1">
         <div class="sub-text-big">ФОРМЫ ПОДПИСКИ</div>
-        <div class="flex-row">
+        <div class="flex-row justify-sub">
             <div class="pic1">
                 <div class="main-text">БЕСПЛАТНАЯ</div>
                 <div class="price-row">
@@ -44,7 +54,7 @@
                     <div class="price-text-small">РУБ.</div>
                 </div>
                 <button class="btn-subscribe">ОФОРМИТЬ</button>
-                <div class="tiny-text">Оплата в месяц. Бесплатный тариф предоставляет <br>доступ ко всей коллекции музыки. Присутствует реклама</div>
+                <div class="tiny-text">Оплата в месяц. Бесплатный тариф предоставляет доступ ко всей коллекции музыки. Присутствует реклама</div>
             </div>
             <div class="pic2">
                 <div class="main-text">СТАНДАРТНАЯ</div>
@@ -53,7 +63,7 @@
                     <div class="price-text-small">РУБ.</div>
                 </div>
                 <button class="btn-subscribe">ОФОРМИТЬ</button>
-                <div class="tiny-text">Оплата в месяц. Стандартный тариф предоставляет <br>доступ ко всей коллекции музыки в среднем качестве</div>
+                <div class="tiny-text">Оплата в месяц. Стандартный тариф предоставляет доступ ко всей коллекции музыки в среднем качестве</div>
             </div>
             <div class="pic3">
                 <div class="main-text">ПРЕМИУМ</div>
@@ -62,7 +72,7 @@
                     <div class="price-text-small">РУБ.</div>
                 </div>
                 <button class="btn-subscribe">ОФОРМИТЬ</button>
-                <div class="tiny-text">Оплата в месяц. Премиум тариф предоставляет доступ <br>ко всей коллекции музыки в высоком качестве</div>
+                <div class="tiny-text">Оплата в месяц. Премиум тариф предоставляет доступ ко всей коллекции музыки в высоком качестве</div>
             </div>
         </div>
         <div class="sub-text-small">На всех тарифах возможно прослушивание музыки с мобильных устройств. На премиум тарифе вы можете <br>скачать все композиции на ваше устройство и слушать музыку без подключения к интернету</div>
@@ -70,8 +80,8 @@
 
     <section class="section-2">
         <div class="sub-text-big">ПОСЛЕДНИЕ НОВОСТИ</div>
-        <div class="flex-row margin-top-50">
-            <img src="images/Music to Be Murdered By.png" alt="news-img-1">
+        <div class="flex-row-2 margin-top-50">
+            <img class="img-size" src="images/Music to Be Murdered By.png" alt="news-img-1">
             <div class="news-text-right">
                 <div class="news-text-big">Music to Be Murdered By</div>
                 <div class="news-text-small">Новый альбом Eminem «Music to Be Murdered By» уже доступен в нашем сервисе.<br>На альбоме вас ждёт 20 новых треков.</div>
@@ -84,7 +94,7 @@
                 <button class="btn-album">К АЛЬБОМУ</button>
             </div>
         </div>
-        <div class="flex-row margin-top-70">
+        <div class="flex-row-2 margin-top-70">
             <div class="news-text-left">
                 <div class="news-text-big">Ordinary Man</div>
                 <div class="news-text-small">Легенда рока Оззи Озборн спустя 10 лет выпустил новый альбом Ordinary Man.<br>Слушайте в числе первых на Music Box</div>
@@ -96,7 +106,7 @@
                 </div>
                 <button class="btn-album">К АЛЬБОМУ</button>
             </div>
-            <img src="images/Ordinary Man.png" alt="news-img-2">
+            <img class="img-size" src="images/Ordinary Man.png" alt="news-img-2" width="570px">
         </div>
     </section>
 
@@ -108,14 +118,11 @@
                 <div class="margin-top-25">С тарифом «Премиум» приложение позволяет скачивать все композиции из нашей коллекции. Вы можете слушать музыку даже без интернета.</div>
                 <button class="btn-app margin-top-25">Скачать</button>
             </div>
-            <img src="images/iphone.png" alt="application" height="227px">
+            <img class="img-size-2" src="images/iphone.png" alt="application" height="227px" width="295.03px">
         </div>
     </section>
 
-    <div class="footer-background">
-        <div class="footer-line"></div>
-    </div>
-    
+    <div class="footer-background"></div>
 
     <footer class="footer-content">
         <div class="footer-menu-1">
@@ -150,14 +157,15 @@
             </div>
         </div>
 
-        <div class="footer-menu-2">
-            <a class="pointer">Магазин</a>
-            <a class="pointer">Обслуживание</a>
-            <a class="pointer">Блог</a>
-            <a class="pointer">Поддержка</a>
-            <a class="pointer">Контакты</a>
-        </div>
+        <div class="footer-line"></div>
 
+        <div class="footer-menu-2">
+            <a class="pointer menu-2-item">Магазин</a>
+            <a class="pointer menu-2-item">Обслуживание</a>
+            <a class="pointer menu-2-item">Блог</a>
+            <a class="pointer menu-2-item">Поддержка</a>
+            <a class="pointer menu-2-item">Контакты</a>
+        </div>
     </footer>
 
     </main>

@@ -15,6 +15,7 @@ body {
     font-family: Roboto, sans-serif;
     color: $main-text;
     background-color: black;
+    overflow-x: hidden;
 }
 
 %flex-center {

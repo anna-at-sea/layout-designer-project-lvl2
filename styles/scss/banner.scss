@@ -1,7 +1,14 @@
 .banner {
-    height: 865px;
+    background-size: cover;
     background-image: url(../images/banner.png);
-    width: 100%;
+    background-position: center;
+}
+
+.banner-position {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
 }
 
 .center {
@@ -15,32 +22,142 @@
 @mixin text-size ($font, $line) {
     font-style: normal;
     font-weight: bold;
+    text-align: center;
     font-size: $font;
     line-height: $line;
 }
 
-@mixin text-position ($t) {
-    position: absolute;
-    top: $t;
+@media(min-width:1920px) {
+    .text-big {
+        @include text-size(60px, 70px);
+        margin-bottom: 10px;
+    }
+    .text-medium {
+        @include text-size(30px, 35px);
+        margin-bottom: 45px;
+    }
+    .text-small {
+        @include text-size(18px, 21px);
+        margin-bottom: 40px;
+    }
+    .banner-height {
+        height: 877px;
+    }
 }
 
-.text-big {
-    @include text-size(60px, 70px);
-    margin-bottom: 10px;
+@media(max-width:1920px) {
+    .text-big {
+        @include text-size(55px, 64px);
+        margin-bottom: 10px;
+    }
+    .text-medium {
+        @include text-size(28px, 33px);
+        margin-bottom: 45px;
+    }
+    .text-small {
+        @include text-size(17px, 20px);
+        margin-bottom: 40px;
+    }
+    .banner-height {
+        height: 854px;
+    }
 }
 
-.text-medium {
-    @include text-size(30px, 35px);
-    margin-bottom: 45px;
+@media(max-width:1280px) {
+    .text-big {
+        @include text-size(50px, 59px);
+        margin-bottom: 10px;
+    }
+    .text-medium {
+        @include text-size(26px, 31px);
+        margin-bottom: 45px;
+    }
+    .text-small {
+        @include text-size(16px, 19px);
+        margin-bottom: 40px;
+    }
+    .banner-height {
+        height: 831px;
+    }
 }
 
-.text-small {
-    @include text-size(18px, 21px);
-    margin-bottom: 40px;
+@media(max-width:1024px) {
+    .text-big {
+        @include text-size(45px, 53px);
+        margin-bottom: 10px;
+    }
+    .text-medium {
+        @include text-size(24px, 29px);
+        margin-bottom: 45px;
+    }
+    .text-small {
+        @include text-size(15px, 19px);
+        margin-bottom: 40px;
+    }
+    .banner-height {
+        height: 808px;
+    }
+}
+
+@media(max-width:768px) {
+    .text-big {
+        @include text-size(40px, 47px);
+        margin-bottom: 10px;
+    }
+    .text-medium {
+        @include text-size(22px, 26px);
+        margin-bottom: 45px;
+    }
+    .text-small {
+        @include text-size(14px, 17px);
+        margin-bottom: 40px;
+    }
+    .banner-height {
+        height: 785px;
+    }
+}
+
+@media(max-width:425px) {
+    .text-big {
+        @include text-size(35px, 42px);
+        margin-bottom: 10px;
+    }
+    .text-medium {
+        @include text-size(20px, 23px);
+        margin-bottom: 45px;
+    }
+    .text-small {
+        @include text-size(13px, 15px);
+        margin-bottom: 40px;
+    }
+    .banner-height {
+        height: 761px;
+    }
+}
+
+@media(max-width:375px) {
+    .text-big {
+        @include text-size(30px, 35px);
+        margin-bottom: 10px;
+    }
+    .text-medium {
+        @include text-size(18px, 21px);
+        margin-bottom: 45px;
+    }
+    .text-small {
+        @include text-size(12px, 14px);
+        margin-bottom: 40px;
+    }
+    .banner-height {
+        height: 738px;
+    }
 }
 
 .text-form {
-    @include text-size(14px, 16px);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
     color: $main-text;
 }
 
@@ -51,28 +168,92 @@
     border-radius: 3px;
     margin-bottom: 30px;
     height: 50px;
-    width: 270px;
     padding-left: 20px;
 }
+
+@media(min-width:610px) {
+.text-box-size {
+    width: 270px;
+}
+}
+
+@media(max-width:610px) {
+    .text-box-size {
+        width: calc(100vw - 40px);
+    }
+    }
 
 .space-between {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .button-style {
     background-color: $access-button;
     height: 50px;
-    width: 570px;
     border: none;
 }
 
-.banner-position {
-    grid-column-start: 1;
-    grid-column-end: 4;
+@media(min-width:610px) {
+.button-width {
+    width: 570px;
+}
+}
+
+@media(max-width:610px) {
+    .button-width {
+        width: calc(100vw - 40px);
+    }
+    }
+
+.banner-content-position {
+    grid-column-start: 2;
+    grid-column-end: 3;
     grid-row-start: 1;
-    grid-row-end: 2;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+@media(max-width:768px) { 
+.banner-content-position-flex {
+        height: fit-content;
+        margin-top: 260px;
+    }
+}
+
+@media(max-width:695px) { 
+    .banner-content-position-flex {
+            height: fit-content;
+            margin-top: 250px;
+        }
+    }
+
+@media(max-width:684px) { 
+    .banner-content-position-flex {
+            height: fit-content;
+            margin-top: 230px;
+        }
+    }
+
+@media(max-width:610px) { 
+    .banner-content-position-flex {
+            height: fit-content;
+            margin-top: 200px;
+        }
+    }
+
+@media(max-width:425px) { 
+    .banner-content-position-flex {
+            height: fit-content;
+            margin-top: 220px;
+        }
+    }
+
+@media(max-width:340px) { 
+    .banner-content-position-flex {
+            height: fit-content;
+            margin-top: 210px;
+        }
+    }
