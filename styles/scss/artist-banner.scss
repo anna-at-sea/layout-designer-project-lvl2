@@ -6,9 +6,9 @@
 }
 
 .artist-banner {
-    height: 545px;
+    background-size: cover;
+    background-position: right 27% top;
     background-image: url("../images/Morten Harket.png");
-    width: 100%;
 }
 
 .artist-banner-content {
@@ -24,18 +24,114 @@
     height: 545 px;
 }
 
-.artist-name {
-    margin-top: 280px;
+@mixin text-size ($font, $line) {
+    font-style: normal;
     font-weight: bold;
-    font-size: 60px;
-    line-height: 70px;
+    font-size: $font;
+    line-height: $line;
 }
 
-.artist-fans {
-    margin-top: 25px;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 21px;
+@media(min-width:1920px) {
+    .artist-name {
+        @include text-size(60px, 70px);
+        margin-top: 280px;
+    }
+    .artist-fans {
+        margin-top: 25px;
+        @include text-size(18px, 21px);
+    }
+    .artist-banner-height {
+        height: 550px;
+    }
+}
+
+@media(max-width:1920px) {
+    .artist-name {
+        @include text-size(55px, 64px);
+        margin-top: 280px;
+    }
+    .artist-fans {
+        margin-top: 25px;
+        @include text-size(17px, 20px);
+    }
+    .artist-banner-height {
+        height: 550px;
+    }
+}
+
+@media(max-width:1280px) {
+    .artist-name {
+        @include text-size(50px, 59px);
+        margin-top: 283px;
+    }
+    .artist-fans {
+        margin-top: 25px;
+        @include text-size(16px, 19px);
+    }
+    .artist-banner-height {
+        height: 566px;
+    }
+}
+
+@media(max-width:1024px) {
+    .artist-name {
+        @include text-size(45px, 53px);
+        margin-top: 286px;
+    }
+    .artist-fans {
+        margin-top: 25px;
+        @include text-size(15px, 19px);
+    }
+    .artist-banner-height {
+        height: 582px;
+    }
+}
+
+@media(max-width:768px) {
+    .artist-name {
+        @include text-size(40px, 47px);
+        margin-top: 289px;
+    }
+    .artist-fans {
+        margin-top: 25px;
+        @include text-size(14px, 17px);
+    }
+    .artist-banner-height {
+        height: 598px;
+    }
+}
+
+@media(max-width:425px) {
+    .artist-name {
+        @include text-size(35px, 42px);
+        margin-top: 292px;
+    }
+    .artist-fans {
+        margin-top: 25px;
+        @include text-size(14px, 16px);
+    }
+    .artist-banner-height {
+        height: 614px;
+    }
+}
+
+@media(max-width:375px) {
+    .artist-name {
+        @include text-size(30px, 35px);
+        margin-top: 295px;
+    }
+    .artist-fans {
+        margin-top: 25px;
+        @include text-size(14px, 16px);
+    }
+    .artist-banner-height {
+        height: 630px;
+    }
+}
+
+.btns-flexbox {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .flexbox {
@@ -56,6 +152,23 @@
     border-radius: 5px;
     border: none;
     cursor: pointer;
+}
+
+.btn-margin {
+    margin-left: 35px;
+}
+
+@media(max-width:492px) {
+    .btn-shape {
+        width: calc(100vw - 40px);
+    }
+    .btn-margin {
+        margin-left: 0;
+        margin-top: 19px;
+    }
+    .btns-flexbox {
+        justify-content: center;
+    }
 }
 
 .btn-blue {
@@ -87,8 +200,4 @@
 
 .text-position {
     margin-left: 15px;
-}
-
-.btn-margin {
-    margin-left: 35px;
 }

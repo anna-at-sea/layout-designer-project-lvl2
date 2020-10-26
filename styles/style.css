@@ -996,9 +996,9 @@
 }
 
 .artist-banner {
-  height: 545px;
+  background-size: cover;
+  background-position: right 27% top;
   background-image: url("../images/Morten Harket.png");
-  width: 100%;
 }
 
 .artist-banner-content {
@@ -1014,18 +1014,156 @@
   height: 545 px;
 }
 
-.artist-name {
-  margin-top: 280px;
-  font-weight: bold;
-  font-size: 60px;
-  line-height: 70px;
-}
+@media (min-width: 1920px) {
+  .artist-name {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 70px;
+    margin-top: 280px;
+  }
 
-.artist-fans {
-  margin-top: 25px;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 21px;
+  .artist-fans {
+    margin-top: 25px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .artist-banner-height {
+    height: 550px;
+  }
+}
+@media (max-width: 1920px) {
+  .artist-name {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 55px;
+    line-height: 64px;
+    margin-top: 280px;
+  }
+
+  .artist-fans {
+    margin-top: 25px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 20px;
+  }
+
+  .artist-banner-height {
+    height: 550px;
+  }
+}
+@media (max-width: 1280px) {
+  .artist-name {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 59px;
+    margin-top: 283px;
+  }
+
+  .artist-fans {
+    margin-top: 25px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .artist-banner-height {
+    height: 566px;
+  }
+}
+@media (max-width: 1024px) {
+  .artist-name {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 53px;
+    margin-top: 286px;
+  }
+
+  .artist-fans {
+    margin-top: 25px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 19px;
+  }
+
+  .artist-banner-height {
+    height: 582px;
+  }
+}
+@media (max-width: 768px) {
+  .artist-name {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 47px;
+    margin-top: 289px;
+  }
+
+  .artist-fans {
+    margin-top: 25px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .artist-banner-height {
+    height: 598px;
+  }
+}
+@media (max-width: 425px) {
+  .artist-name {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 42px;
+    margin-top: 292px;
+  }
+
+  .artist-fans {
+    margin-top: 25px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .artist-banner-height {
+    height: 614px;
+  }
+}
+@media (max-width: 375px) {
+  .artist-name {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+    margin-top: 295px;
+  }
+
+  .artist-fans {
+    margin-top: 25px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .artist-banner-height {
+    height: 630px;
+  }
+}
+.btns-flexbox {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .flexbox {
@@ -1048,6 +1186,24 @@
   cursor: pointer;
 }
 
+.btn-margin {
+  margin-left: 35px;
+}
+
+@media (max-width: 492px) {
+  .btn-shape {
+    width: calc(100vw - 40px);
+  }
+
+  .btn-margin {
+    margin-left: 0;
+    margin-top: 19px;
+  }
+
+  .btns-flexbox {
+    justify-content: center;
+  }
+}
 .btn-blue {
   background-color: #5328A1;
 }
@@ -1079,10 +1235,6 @@
   margin-left: 15px;
 }
 
-.btn-margin {
-  margin-left: 35px;
-}
-
 .tracks-section {
   grid-column-start: 2;
   grid-column-end: 3;
@@ -1098,22 +1250,66 @@
   color: #FFFFFF;
 }
 
+@media (max-width: 426px) {
+  .header-styles {
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
 .tracks {
   display: flex;
   flex-wrap: wrap;
   margin-top: 50px;
-  width: 1131.98px;
-  height: 200px;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .track {
   display: flex;
-  width: 531.98px;
   height: 50px;
   cursor: pointer;
+  justify-content: space-between;
 }
 
+.left-side {
+  display: flex;
+}
+
+.track-margin-bottom {
+  margin-bottom: 25px;
+}
+
+.track-margin-right {
+  margin-right: 68.02px;
+}
+
+@media (min-width: 1189px) {
+  .track-width {
+    width: 531.98px;
+  }
+}
+@media (max-width: 1189px) {
+  .add-track-margin-bottom {
+    margin-bottom: 25px;
+  }
+
+  .track-width {
+    width: calc(50% - 35px);
+  }
+}
+@media (max-width: 768px) {
+  .track-margin-right {
+    margin-right: 0;
+  }
+
+  .track-width {
+    width: 531.98px;
+  }
+}
+@media (max-width: 572px) {
+  .track-width {
+    width: 100%;
+  }
+}
 .icon-1 {
   width: 55.3px;
   height: 50px;
@@ -1176,8 +1372,7 @@
 }
 
 .song-duration {
-  position: absolute;
-  margin-left: 502.12px;
+  margin-right: 0;
   margin-top: 28px;
   font-weight: 400;
   font-size: 14px;
@@ -1201,68 +1396,495 @@
 .album {
   display: flex;
   flex-direction: column;
-  width: 250px;
-  height: 312px;
   cursor: pointer;
-  margin-right: 50px;
   margin-top: 50px;
 }
 
-.cover-1 {
-  width: 250px;
-  height: 250px;
-  background-size: 250px 250px;
-  background-image: url("../images/Brother.png");
+.header-styles {
+  font-weight: 700;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 45px;
+  color: #FFFFFF;
 }
 
-.cover-2 {
-  width: 250px;
-  height: 250px;
-  background-size: 250px 250px;
-  background-image: url("../images/Out of My Hands.png");
+@media (max-width: 426px) {
+  .header-styles {
+    font-size: 20px;
+    line-height: 23px;
+  }
 }
+@media (min-width: 1920px) {
+  .cover-1 {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
+    background-image: url("../images/Brother.png");
+  }
 
-.cover-3 {
-  width: 250px;
-  height: 250px;
-  background-size: 250px 250px;
-  background-image: url("../images/Letter from Egypt.png");
+  .cover-2 {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
+    background-image: url("../images/Out of My Hands.png");
+  }
+
+  .cover-3 {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
+    background-image: url("../images/Letter from Egypt.png");
+  }
+
+  .cover-4 {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
+    background-image: url("../images/Vogts Villa.png");
+  }
+
+  .cover-5 {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
+    background-image: url("../images/Wild Seed.png");
+  }
+
+  .cover-6 {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
+    background-image: url("../images/Poetenes Evangelium.png");
+  }
+
+  .album-margin-right {
+    margin-right: 50px;
+  }
+
+  .album-name {
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .album-year {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
+@media (max-width: 1920px) {
+  .cover-1 {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
+    background-image: url("../images/Brother.png");
+  }
 
-.cover-4 {
-  width: 250px;
-  height: 250px;
-  background-size: 250px 250px;
-  background-image: url("../images/Vogts Villa.png");
+  .cover-2 {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
+    background-image: url("../images/Out of My Hands.png");
+  }
+
+  .cover-3 {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
+    background-image: url("../images/Letter from Egypt.png");
+  }
+
+  .cover-4 {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
+    background-image: url("../images/Vogts Villa.png");
+  }
+
+  .cover-5 {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
+    background-image: url("../images/Wild Seed.png");
+  }
+
+  .cover-6 {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
+    background-image: url("../images/Poetenes Evangelium.png");
+  }
+
+  .album-margin-right {
+    margin-right: 50px;
+  }
+
+  .album-name {
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .album-year {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
+@media (max-width: 1280px) {
+  .cover-1 {
+    width: 230px;
+    height: 230px;
+    background-size: 230px 230px;
+    background-image: url("../images/Brother.png");
+  }
 
-.cover-5 {
-  width: 250px;
-  height: 250px;
-  background-size: 250px 250px;
-  background-image: url("../images/Wild Seed.png");
+  .cover-2 {
+    width: 230px;
+    height: 230px;
+    background-size: 230px 230px;
+    background-image: url("../images/Out of My Hands.png");
+  }
+
+  .cover-3 {
+    width: 230px;
+    height: 230px;
+    background-size: 230px 230px;
+    background-image: url("../images/Letter from Egypt.png");
+  }
+
+  .cover-4 {
+    width: 230px;
+    height: 230px;
+    background-size: 230px 230px;
+    background-image: url("../images/Vogts Villa.png");
+  }
+
+  .cover-5 {
+    width: 230px;
+    height: 230px;
+    background-size: 230px 230px;
+    background-image: url("../images/Wild Seed.png");
+  }
+
+  .cover-6 {
+    width: 230px;
+    height: 230px;
+    background-size: 230px 230px;
+    background-image: url("../images/Poetenes Evangelium.png");
+  }
+
+  .album-margin-right {
+    margin-right: 45px;
+  }
+
+  .album-name {
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .album-year {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
+@media (max-width: 1024px) {
+  .cover-1 {
+    width: 200px;
+    height: 200px;
+    background-size: 200px 200px;
+    background-image: url("../images/Brother.png");
+  }
 
-.cover-6 {
-  width: 250px;
-  height: 250px;
-  background-size: 250px 250px;
-  background-image: url("../images/Poetenes Evangelium.png");
+  .cover-2 {
+    width: 200px;
+    height: 200px;
+    background-size: 200px 200px;
+    background-image: url("../images/Out of My Hands.png");
+  }
+
+  .cover-3 {
+    width: 200px;
+    height: 200px;
+    background-size: 200px 200px;
+    background-image: url("../images/Letter from Egypt.png");
+  }
+
+  .cover-4 {
+    width: 200px;
+    height: 200px;
+    background-size: 200px 200px;
+    background-image: url("../images/Vogts Villa.png");
+  }
+
+  .cover-5 {
+    width: 200px;
+    height: 200px;
+    background-size: 200px 200px;
+    background-image: url("../images/Wild Seed.png");
+  }
+
+  .cover-6 {
+    width: 200px;
+    height: 200px;
+    background-size: 200px 200px;
+    background-image: url("../images/Poetenes Evangelium.png");
+  }
+
+  .album-margin-right {
+    margin-right: 40px;
+  }
+
+  .album-name {
+    font-size: 19px;
+    line-height: 22px;
+  }
+
+  .album-year {
+    font-size: 15px;
+    line-height: 18px;
+  }
 }
+@media (max-width: 768px) {
+  .cover-1 {
+    width: 190px;
+    height: 190px;
+    background-size: 190px 190px;
+    background-image: url("../images/Brother.png");
+  }
 
+  .cover-2 {
+    width: 190px;
+    height: 190px;
+    background-size: 190px 190px;
+    background-image: url("../images/Out of My Hands.png");
+  }
+
+  .cover-3 {
+    width: 190px;
+    height: 190px;
+    background-size: 190px 190px;
+    background-image: url("../images/Letter from Egypt.png");
+  }
+
+  .cover-4 {
+    width: 190px;
+    height: 190px;
+    background-size: 190px 190px;
+    background-image: url("../images/Vogts Villa.png");
+  }
+
+  .cover-5 {
+    width: 190px;
+    height: 190px;
+    background-size: 190px 190px;
+    background-image: url("../images/Wild Seed.png");
+  }
+
+  .cover-6 {
+    width: 190px;
+    height: 190px;
+    background-size: 190px 190px;
+    background-image: url("../images/Poetenes Evangelium.png");
+  }
+
+  .album-margin-right {
+    margin-right: 35px;
+  }
+
+  .album-name {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .album-year {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+@media (max-width: 507px) {
+  .cover-1 {
+    width: 170px;
+    height: 170px;
+    background-size: 170px 170px;
+    background-image: url("../images/Brother.png");
+  }
+
+  .cover-2 {
+    width: 170px;
+    height: 170px;
+    background-size: 170px 170px;
+    background-image: url("../images/Out of My Hands.png");
+  }
+
+  .cover-3 {
+    width: 170px;
+    height: 170px;
+    background-size: 170px 170px;
+    background-image: url("../images/Letter from Egypt.png");
+  }
+
+  .cover-4 {
+    width: 170px;
+    height: 170px;
+    background-size: 170px 170px;
+    background-image: url("../images/Vogts Villa.png");
+  }
+
+  .cover-5 {
+    width: 170px;
+    height: 170px;
+    background-size: 170px 170px;
+    background-image: url("../images/Wild Seed.png");
+  }
+
+  .cover-6 {
+    width: 170px;
+    height: 170px;
+    background-size: 170px 170px;
+    background-image: url("../images/Poetenes Evangelium.png");
+  }
+
+  .albums {
+    justify-content: space-between;
+  }
+
+  .album-margin-right {
+    margin-right: 0;
+  }
+
+  .album-name {
+    font-size: 17px;
+    line-height: 20px;
+  }
+
+  .album-year {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+@media (max-width: 417px) {
+  .cover-1 {
+    width: 150px;
+    height: 150px;
+    background-size: 150px 150px;
+    background-image: url("../images/Brother.png");
+  }
+
+  .cover-2 {
+    width: 150px;
+    height: 150px;
+    background-size: 150px 150px;
+    background-image: url("../images/Out of My Hands.png");
+  }
+
+  .cover-3 {
+    width: 150px;
+    height: 150px;
+    background-size: 150px 150px;
+    background-image: url("../images/Letter from Egypt.png");
+  }
+
+  .cover-4 {
+    width: 150px;
+    height: 150px;
+    background-size: 150px 150px;
+    background-image: url("../images/Vogts Villa.png");
+  }
+
+  .cover-5 {
+    width: 150px;
+    height: 150px;
+    background-size: 150px 150px;
+    background-image: url("../images/Wild Seed.png");
+  }
+
+  .cover-6 {
+    width: 150px;
+    height: 150px;
+    background-size: 150px 150px;
+    background-image: url("../images/Poetenes Evangelium.png");
+  }
+
+  .album-margin-right {
+    margin-right: 0;
+    width: 150px;
+  }
+
+  .album-name {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .album-year {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+@media (max-width: 377px) {
+  .cover-1 {
+    width: 130px;
+    height: 130px;
+    background-size: 130px 130px;
+    background-image: url("../images/Brother.png");
+  }
+
+  .cover-2 {
+    width: 130px;
+    height: 130px;
+    background-size: 130px 130px;
+    background-image: url("../images/Out of My Hands.png");
+  }
+
+  .cover-3 {
+    width: 130px;
+    height: 130px;
+    background-size: 130px 130px;
+    background-image: url("../images/Letter from Egypt.png");
+  }
+
+  .cover-4 {
+    width: 130px;
+    height: 130px;
+    background-size: 130px 130px;
+    background-image: url("../images/Vogts Villa.png");
+  }
+
+  .cover-5 {
+    width: 130px;
+    height: 130px;
+    background-size: 130px 130px;
+    background-image: url("../images/Wild Seed.png");
+  }
+
+  .cover-6 {
+    width: 130px;
+    height: 130px;
+    background-size: 130px 130px;
+    background-image: url("../images/Poetenes Evangelium.png");
+  }
+
+  .album-margin-right {
+    margin-right: 0;
+    width: 130px;
+  }
+
+  .album-name {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .album-year {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
 .album-name {
   margin-top: 10px;
   font-weight: 700px;
   color: #FFFFFF;
-  font-size: 20px;
-  line-height: 23px;
 }
 
 .album-year {
   margin-top: 10px;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
   color: #FFFFFF;
 }
 
@@ -1283,82 +1905,607 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 250px;
-  height: 317px;
   cursor: pointer;
-  margin-right: 50px;
   margin-top: 50px;
 }
 
-.artist-1 {
-  width: 250px;
-  height: 250px;
-  background-size: 250px 250px;
-  background-image: url("../images/A-ha.png");
+.header-styles {
+  font-weight: 700;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 45px;
+  color: #FFFFFF;
 }
 
-.artist-2 {
-  width: 250px;
-  height: 250px;
-  background-size: 250px 250px;
-  background-image: url("../images/Tears for Fears.png");
+@media (max-width: 426px) {
+  .header-styles {
+    font-size: 20px;
+    line-height: 23px;
+  }
 }
+@media (min-width: 1920px) {
+  .artist-1 {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
+    background-image: url("../images/A-ha.png");
+  }
 
-.artist-3 {
-  width: 250px;
-  height: 250px;
-  background-size: 250px 250px;
-  background-image: url("../images/Duran Duran.png");
+  .artist-2 {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
+    background-image: url("../images/Tears for Fears.png");
+  }
+
+  .artist-3 {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
+    background-image: url("../images/Duran Duran.png");
+  }
+
+  .artist-4 {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
+    background-image: url("../images/Jack Savoretti.png");
+  }
+
+  .artist-5 {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
+    background-image: url("../images/Keane.png");
+  }
+
+  .artist-6 {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
+    background-image: url("../images/Frank Sinatra.png");
+  }
+
+  .artist-7 {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
+    background-image: url("../images/Paul Young.png");
+  }
+
+  .artist-8 {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
+    background-image: url("../images/Chris Rea.png");
+  }
+
+  .artist-margin-right {
+    margin-right: 50px;
+  }
+
+  .other-artist-name {
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .num-of-fans {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
+@media (max-width: 1920px) {
+  .artist-1 {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
+    background-image: url("../images/A-ha.png");
+  }
 
-.artist-4 {
-  width: 250px;
-  height: 250px;
-  background-size: 250px 250px;
-  background-image: url("../images/Jack Savoretti.png");
+  .artist-2 {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
+    background-image: url("../images/Tears for Fears.png");
+  }
+
+  .artist-3 {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
+    background-image: url("../images/Duran Duran.png");
+  }
+
+  .artist-4 {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
+    background-image: url("../images/Jack Savoretti.png");
+  }
+
+  .artist-5 {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
+    background-image: url("../images/Keane.png");
+  }
+
+  .artist-6 {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
+    background-image: url("../images/Frank Sinatra.png");
+  }
+
+  .artist-7 {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
+    background-image: url("../images/Paul Young.png");
+  }
+
+  .artist-8 {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
+    background-image: url("../images/Chris Rea.png");
+  }
+
+  .artist-margin-right {
+    margin-right: 50px;
+  }
+
+  .other-artist-name {
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .num-of-fans {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
+@media (max-width: 1280px) {
+  .artist-1 {
+    width: 230px;
+    height: 230px;
+    background-size: 230px 230px;
+    background-image: url("../images/A-ha.png");
+  }
 
-.artist-5 {
-  width: 250px;
-  height: 250px;
-  background-size: 250px 250px;
-  background-image: url("../images/Keane.png");
+  .artist-2 {
+    width: 230px;
+    height: 230px;
+    background-size: 230px 230px;
+    background-image: url("../images/Tears for Fears.png");
+  }
+
+  .artist-3 {
+    width: 230px;
+    height: 230px;
+    background-size: 230px 230px;
+    background-image: url("../images/Duran Duran.png");
+  }
+
+  .artist-4 {
+    width: 230px;
+    height: 230px;
+    background-size: 230px 230px;
+    background-image: url("../images/Jack Savoretti.png");
+  }
+
+  .artist-5 {
+    width: 230px;
+    height: 230px;
+    background-size: 230px 230px;
+    background-image: url("../images/Keane.png");
+  }
+
+  .artist-6 {
+    width: 230px;
+    height: 230px;
+    background-size: 230px 230px;
+    background-image: url("../images/Frank Sinatra.png");
+  }
+
+  .artist-7 {
+    width: 230px;
+    height: 230px;
+    background-size: 230px 230px;
+    background-image: url("../images/Paul Young.png");
+  }
+
+  .artist-8 {
+    width: 230px;
+    height: 230px;
+    background-size: 230px 230px;
+    background-image: url("../images/Chris Rea.png");
+  }
+
+  .artist-margin-right {
+    margin-right: 45px;
+  }
+
+  .other-artist-name {
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .num-of-fans {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
+@media (max-width: 1024px) {
+  .artist-1 {
+    width: 200px;
+    height: 200px;
+    background-size: 200px 200px;
+    background-image: url("../images/A-ha.png");
+  }
 
-.artist-6 {
-  width: 250px;
-  height: 250px;
-  background-size: 250px 250px;
-  background-image: url("../images/Frank Sinatra.png");
+  .artist-2 {
+    width: 200px;
+    height: 200px;
+    background-size: 200px 200px;
+    background-image: url("../images/Tears for Fears.png");
+  }
+
+  .artist-3 {
+    width: 200px;
+    height: 200px;
+    background-size: 200px 200px;
+    background-image: url("../images/Duran Duran.png");
+  }
+
+  .artist-4 {
+    width: 200px;
+    height: 200px;
+    background-size: 200px 200px;
+    background-image: url("../images/Jack Savoretti.png");
+  }
+
+  .artist-5 {
+    width: 200px;
+    height: 200px;
+    background-size: 200px 200px;
+    background-image: url("../images/Keane.png");
+  }
+
+  .artist-6 {
+    width: 200px;
+    height: 200px;
+    background-size: 200px 200px;
+    background-image: url("../images/Frank Sinatra.png");
+  }
+
+  .artist-7 {
+    width: 200px;
+    height: 200px;
+    background-size: 200px 200px;
+    background-image: url("../images/Paul Young.png");
+  }
+
+  .artist-8 {
+    width: 200px;
+    height: 200px;
+    background-size: 200px 200px;
+    background-image: url("../images/Chris Rea.png");
+  }
+
+  .artist-margin-right {
+    margin-right: 40px;
+  }
+
+  .other-artist-name {
+    font-size: 19px;
+    line-height: 22px;
+  }
+
+  .num-of-fans {
+    font-size: 15px;
+    line-height: 18px;
+  }
 }
+@media (max-width: 768px) {
+  .artist-1 {
+    width: 190px;
+    height: 190px;
+    background-size: 190px 190px;
+    background-image: url("../images/A-ha.png");
+  }
 
-.artist-7 {
-  width: 250px;
-  height: 250px;
-  background-size: 250px 250px;
-  background-image: url("../images/Paul Young.png");
+  .artist-2 {
+    width: 190px;
+    height: 190px;
+    background-size: 190px 190px;
+    background-image: url("../images/Tears for Fears.png");
+  }
+
+  .artist-3 {
+    width: 190px;
+    height: 190px;
+    background-size: 190px 190px;
+    background-image: url("../images/Duran Duran.png");
+  }
+
+  .artist-4 {
+    width: 190px;
+    height: 190px;
+    background-size: 190px 190px;
+    background-image: url("../images/Jack Savoretti.png");
+  }
+
+  .artist-5 {
+    width: 190px;
+    height: 190px;
+    background-size: 190px 190px;
+    background-image: url("../images/Keane.png");
+  }
+
+  .artist-6 {
+    width: 190px;
+    height: 190px;
+    background-size: 190px 190px;
+    background-image: url("../images/Frank Sinatra.png");
+  }
+
+  .artist-7 {
+    width: 190px;
+    height: 190px;
+    background-size: 190px 190px;
+    background-image: url("../images/Paul Young.png");
+  }
+
+  .artist-8 {
+    width: 190px;
+    height: 190px;
+    background-size: 190px 190px;
+    background-image: url("../images/Chris Rea.png");
+  }
+
+  .artist-margin-right {
+    margin-right: 35px;
+  }
+
+  .other-artist-name {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .num-of-fans {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
+@media (max-width: 507px) {
+  .artist-1 {
+    width: 170px;
+    height: 170px;
+    background-size: 170px 170px;
+    background-image: url("../images/A-ha.png");
+  }
 
-.artist-8 {
-  width: 250px;
-  height: 250px;
-  background-size: 250px 250px;
-  background-image: url("../images/Chris Rea.png");
+  .artist-2 {
+    width: 170px;
+    height: 170px;
+    background-size: 170px 170px;
+    background-image: url("../images/Tears for Fears.png");
+  }
+
+  .artist-3 {
+    width: 170px;
+    height: 170px;
+    background-size: 170px 170px;
+    background-image: url("../images/Duran Duran.png");
+  }
+
+  .artist-4 {
+    width: 170px;
+    height: 170px;
+    background-size: 170px 170px;
+    background-image: url("../images/Jack Savoretti.png");
+  }
+
+  .artist-5 {
+    width: 170px;
+    height: 170px;
+    background-size: 170px 170px;
+    background-image: url("../images/Keane.png");
+  }
+
+  .artist-6 {
+    width: 170px;
+    height: 170px;
+    background-size: 170px 170px;
+    background-image: url("../images/Frank Sinatra.png");
+  }
+
+  .artist-7 {
+    width: 170px;
+    height: 170px;
+    background-size: 170px 170px;
+    background-image: url("../images/Paul Young.png");
+  }
+
+  .artist-8 {
+    width: 170px;
+    height: 170px;
+    background-size: 170px 170px;
+    background-image: url("../images/Chris Rea.png");
+  }
+
+  .other-artists {
+    justify-content: space-between;
+  }
+
+  .artist-margin-right {
+    margin-right: 0;
+  }
+
+  .other-artist-name {
+    font-size: 17px;
+    line-height: 20px;
+  }
+
+  .num-of-fans {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
+@media (max-width: 417px) {
+  .artist-1 {
+    width: 150px;
+    height: 150px;
+    background-size: 150px 150px;
+    background-image: url("../images/A-ha.png");
+  }
 
+  .artist-2 {
+    width: 150px;
+    height: 150px;
+    background-size: 150px 150px;
+    background-image: url("../images/Tears for Fears.png");
+  }
+
+  .artist-3 {
+    width: 150px;
+    height: 150px;
+    background-size: 150px 150px;
+    background-image: url("../images/Duran Duran.png");
+  }
+
+  .artist-4 {
+    width: 150px;
+    height: 150px;
+    background-size: 150px 150px;
+    background-image: url("../images/Jack Savoretti.png");
+  }
+
+  .artist-5 {
+    width: 150px;
+    height: 150px;
+    background-size: 150px 150px;
+    background-image: url("../images/Keane.png");
+  }
+
+  .artist-6 {
+    width: 150px;
+    height: 150px;
+    background-size: 150px 150px;
+    background-image: url("../images/Frank Sinatra.png");
+  }
+
+  .artist-7 {
+    width: 150px;
+    height: 150px;
+    background-size: 150px 150px;
+    background-image: url("../images/Paul Young.png");
+  }
+
+  .artist-8 {
+    width: 150px;
+    height: 150px;
+    background-size: 150px 150px;
+    background-image: url("../images/Chris Rea.png");
+  }
+
+  .artist-margin-right {
+    margin-right: 0;
+    width: 150px;
+  }
+
+  .other-artist-name {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .num-of-fans {
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
+@media (max-width: 377px) {
+  .artist-1 {
+    width: 130px;
+    height: 130px;
+    background-size: 130px 130px;
+    background-image: url("../images/A-ha.png");
+  }
+
+  .artist-2 {
+    width: 130px;
+    height: 130px;
+    background-size: 130px 130px;
+    background-image: url("../images/Tears for Fears.png");
+  }
+
+  .artist-3 {
+    width: 130px;
+    height: 130px;
+    background-size: 130px 130px;
+    background-image: url("../images/Duran Duran.png");
+  }
+
+  .artist-4 {
+    width: 130px;
+    height: 130px;
+    background-size: 130px 130px;
+    background-image: url("../images/Jack Savoretti.png");
+  }
+
+  .artist-5 {
+    width: 130px;
+    height: 130px;
+    background-size: 130px 130px;
+    background-image: url("../images/Keane.png");
+  }
+
+  .artist-6 {
+    width: 130px;
+    height: 130px;
+    background-size: 130px 130px;
+    background-image: url("../images/Frank Sinatra.png");
+  }
+
+  .artist-7 {
+    width: 130px;
+    height: 130px;
+    background-size: 130px 130px;
+    background-image: url("../images/Paul Young.png");
+  }
+
+  .artist-8 {
+    width: 130px;
+    height: 130px;
+    background-size: 130px 130px;
+    background-image: url("../images/Chris Rea.png");
+  }
+
+  .artist-margin-right {
+    margin-right: 0;
+    width: 130px;
+  }
+
+  .other-artist-name {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .num-of-fans {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
 .other-artist-name {
   margin-top: 15px;
   font-weight: 700px;
   color: #FFFFFF;
-  font-size: 20px;
-  line-height: 23px;
 }
 
 .num-of-fans {
   margin-top: 10px;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
   color: #FFFFFF;
 }
 

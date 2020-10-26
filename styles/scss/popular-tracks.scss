@@ -13,20 +13,67 @@
     color: $main-text;
 }
 
+@media(max-width:426px) {
+    .header-styles {
+        font-size: 20px;
+        line-height: 23px;
+    }
+}
+
 .tracks {
     display: flex;
     flex-wrap: wrap;
     margin-top: 50px;
-    width: 1131.98px;
-    height: 200px;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .track {
     display: flex;
-    width: 531.98px;
     height: 50px;
     cursor: pointer;
+    justify-content: space-between;
+}
+
+.left-side {
+    display: flex;
+}
+
+.track-margin-bottom {
+    margin-bottom: 25px;
+}
+
+.track-margin-right {
+    margin-right: 68.02px;
+}
+
+@media(min-width:1189px) {
+    .track-width {
+        width: 531.98px;
+    }
+}
+
+@media(max-width:1189px) {
+    .add-track-margin-bottom {
+        margin-bottom: 25px;
+    }
+    .track-width {
+        width: calc(50% - 35px);
+    }
+}
+
+@media(max-width:768px) {
+    .track-margin-right {
+        margin-right: 0;
+    }
+    .track-width {
+        width: 531.98px;
+    }
+}
+
+@media(max-width:572px) {
+    .track-width {
+        width: 100%;
+    }
 }
 
 $icons: "Wild Seed", "Letter from Egypt", "Brother", "Wild Seed", "Letter from Egypt", "Out of My Hands";
@@ -64,8 +111,7 @@ $icons: "Wild Seed", "Letter from Egypt", "Brother", "Wild Seed", "Letter from E
 }
 
 .song-duration {
-    position: absolute;
-    margin-left: 502.12px;
+    margin-right: 0;
     margin-top: 28px;
     font-weight: 400;
     font-size: 14px;

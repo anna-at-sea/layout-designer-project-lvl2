@@ -15,40 +15,185 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 250px;
-    height: 317px;
     cursor: pointer;
-    margin-right: 50px;
     margin-top: 50px;
+}
+
+.header-styles {
+    font-weight: 700;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 45px;
+    color: $main-text;
+}
+
+@media(max-width:426px) {
+    .header-styles {
+        font-size: 20px;
+        line-height: 23px;
+    }
 }
 
 $artists: "A-ha", "Tears for Fears", "Duran Duran", "Jack Savoretti", "Keane", "Frank Sinatra", "Paul Young", "Chris Rea";
 
-@mixin artist-cover($i, $artist) {
+@mixin artist-cover($i, $artist, $size) {
     .artist-#{$i} {
-        width: 250px;
-        height: 250px;
-        background-size: 250px 250px;
+        width: $size;
+        height: $size;
+        background-size: $size $size;
         background-image: url("../images/#{$artist}.png");
     }
 }
 
-@for $i from 1 through 8 {
-    @include artist-cover ($i, nth($artists, $i));
+@media (min-width:1920px) {
+    @for $i from 1 through 8 {
+        @include artist-cover ($i, nth($artists, $i), 250px);
+    }
+    .artist-margin-right {
+        margin-right: 50px;
+    }
+    .other-artist-name {
+        font-size: 20px;
+        line-height: 23px; 
+    }
+    .num-of-fans {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+@media (max-width:1920px) {
+    @for $i from 1 through 8 {
+        @include artist-cover ($i, nth($artists, $i), 250px);
+    }
+    .artist-margin-right {
+        margin-right: 50px;
+    }
+    .other-artist-name {
+        font-size: 20px;
+        line-height: 23px; 
+    }
+    .num-of-fans {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+@media (max-width:1280px) {
+    @for $i from 1 through 8 {
+        @include artist-cover ($i, nth($artists, $i), 230px);
+    }
+    .artist-margin-right {
+        margin-right: 45px;
+    }
+    .other-artist-name {
+        font-size: 20px;
+        line-height: 23px; 
+    }
+    .num-of-fans {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+@media (max-width:1024px) {
+    @for $i from 1 through 8 {
+        @include artist-cover ($i, nth($artists, $i), 200px);
+    }
+    .artist-margin-right {
+        margin-right: 40px;
+    }
+    .other-artist-name {
+        font-size: 19px;
+        line-height: 22px; 
+    }
+    .num-of-fans {
+        font-size: 15px;
+        line-height: 18px;
+    }
+}
+
+@media (max-width:768px) {
+    @for $i from 1 through 8 {
+        @include artist-cover ($i, nth($artists, $i), 190px);
+    }
+    .artist-margin-right {
+        margin-right: 35px;
+    }
+    .other-artist-name {
+        font-size: 18px;
+        line-height: 21px; 
+    }
+    .num-of-fans {
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+@media (max-width:507px) {
+    @for $i from 1 through 8 {
+        @include artist-cover ($i, nth($artists, $i), 170px);
+    }
+    .other-artists {
+        justify-content: space-between;
+    }
+    .artist-margin-right {
+        margin-right: 0;
+    }
+    .other-artist-name {
+        font-size: 17px;
+        line-height: 20px; 
+    }
+    .num-of-fans {
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+
+@media (max-width:417px) {
+    @for $i from 1 through 8 {
+        @include artist-cover ($i, nth($artists, $i), 150px);
+    }
+    .artist-margin-right {
+        margin-right: 0;
+        width: 150px;
+    }
+    .other-artist-name {
+        font-size: 16px;
+        line-height: 19px; 
+    }
+    .num-of-fans {
+        font-size: 13px;
+        line-height: 15px;
+    }
+}
+
+@media (max-width:377px) {
+    @for $i from 1 through 8 {
+        @include artist-cover ($i, nth($artists, $i), 130px);
+    }
+    .artist-margin-right {
+        margin-right: 0;
+        width: 130px;
+    }
+    .other-artist-name {
+        font-size: 16px;
+        line-height: 19px; 
+    }
+    .num-of-fans {
+        font-size: 12px;
+        line-height: 14px;
+    }
 }
 
 .other-artist-name {
     margin-top: 15px;
     font-weight: 700px;
     color: $main-text;
-    font-size: 20px;
-    line-height: 23px;
 }
 
 .num-of-fans {
     margin-top: 10px;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
     color: $main-text;
 }

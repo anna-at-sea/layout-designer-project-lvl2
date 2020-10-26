@@ -14,40 +14,185 @@
 .album {
     display: flex;
     flex-direction: column;
-    width: 250px;
-    height: 312px;
     cursor: pointer;
-    margin-right: 50px;
     margin-top: 50px;
+}
+
+.header-styles {
+    font-weight: 700;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 45px;
+    color: $main-text;
+}
+
+@media(max-width:426px) {
+    .header-styles {
+        font-size: 20px;
+        line-height: 23px;
+    }
 }
 
 $album-covers: "Brother", "Out of My Hands", "Letter from Egypt", "Vogts Villa", "Wild Seed", "Poetenes Evangelium";
 
-@mixin album-cover($i, $album-cover) {
+@mixin album-cover($i, $album-cover, $size) {
     .cover-#{$i} {
-        width: 250px;
-        height: 250px;
-        background-size: 250px 250px;
+        width: $size;
+        height: $size;
+        background-size: $size $size;
         background-image: url("../images/#{$album-cover}.png");
     }
 }
 
-@for $i from 1 through 6 {
-    @include album-cover ($i, nth($album-covers, $i));
+@media (min-width:1920px) {
+    @for $i from 1 through 6 {
+        @include album-cover ($i, nth($album-covers, $i), 250px);
+    }
+    .album-margin-right {
+        margin-right: 50px;
+    }
+    .album-name {
+        font-size: 20px;
+        line-height: 23px; 
+    }
+    .album-year {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+@media (max-width:1920px) {
+    @for $i from 1 through 6 {
+        @include album-cover ($i, nth($album-covers, $i), 250px);
+    }
+    .album-margin-right {
+        margin-right: 50px;
+    }
+    .album-name {
+        font-size: 20px;
+        line-height: 23px; 
+    }
+    .album-year {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+@media (max-width:1280px) {
+    @for $i from 1 through 6 {
+        @include album-cover ($i, nth($album-covers, $i), 230px);
+    }
+    .album-margin-right {
+        margin-right: 45px;
+    }
+    .album-name {
+        font-size: 20px;
+        line-height: 23px; 
+    }
+    .album-year {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+@media (max-width:1024px) {
+    @for $i from 1 through 6 {
+        @include album-cover ($i, nth($album-covers, $i), 200px);
+    }
+    .album-margin-right {
+        margin-right: 40px;
+    }
+    .album-name {
+        font-size: 19px;
+        line-height: 22px; 
+    }
+    .album-year {
+        font-size: 15px;
+        line-height: 18px;
+    }
+}
+
+@media (max-width:768px) {
+    @for $i from 1 through 6 {
+        @include album-cover ($i, nth($album-covers, $i), 190px);
+    }
+    .album-margin-right {
+        margin-right: 35px;
+    }
+    .album-name {
+        font-size: 18px;
+        line-height: 21px; 
+    }
+    .album-year {
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+@media (max-width:507px) {
+    @for $i from 1 through 6 {
+        @include album-cover ($i, nth($album-covers, $i), 170px);
+    }
+    .albums {
+        justify-content: space-between;
+    }
+    .album-margin-right {
+        margin-right: 0;
+    }
+    .album-name {
+        font-size: 17px;
+        line-height: 20px; 
+    }
+    .album-year {
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+
+@media (max-width:417px) {
+    @for $i from 1 through 6 {
+        @include album-cover ($i, nth($album-covers, $i), 150px);
+    }
+    .album-margin-right {
+        margin-right: 0;
+        width: 150px;
+    }
+    .album-name {
+        font-size: 16px;
+        line-height: 19px; 
+    }
+    .album-year {
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+
+@media (max-width:377px) {
+    @for $i from 1 through 6 {
+        @include album-cover ($i, nth($album-covers, $i), 130px);
+    }
+    .album-margin-right {
+        margin-right: 0;
+        width: 130px;
+    }
+    .album-name {
+        font-size: 16px;
+        line-height: 19px; 
+    }
+    .album-year {
+        font-size: 14px;
+        line-height: 16px;
+    }
 }
 
 .album-name {
     margin-top: 10px;
     font-weight: 700px;
     color: $main-text;
-    font-size: 20px;
-    line-height: 23px;
 }
 
 .album-year {
     margin-top: 10px;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
     color: $main-text;
 }
