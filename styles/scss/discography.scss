@@ -33,20 +33,21 @@
     }
 }
 
-$album-covers: "Brother", "Out of My Hands", "Letter from Egypt", "Vogts Villa", "Wild Seed", "Poetenes Evangelium";
-
-@mixin album-cover($i, $album-cover, $size) {
+@mixin album-cover($i, $size) {
     .cover-#{$i} {
         width: $size;
         height: $size;
-        background-size: $size $size;
-        background-image: url("../images/#{$album-cover}.png");
     }
+}
+
+.play-btn {
+    filter: invert(100%);
+    position: relative;
 }
 
 @media (min-width:1920px) {
     @for $i from 1 through 6 {
-        @include album-cover ($i, nth($album-covers, $i), 250px);
+        @include album-cover ($i, 250px);
     }
     .album-margin-right {
         margin-right: 50px;
@@ -58,12 +59,18 @@ $album-covers: "Brother", "Out of My Hands", "Letter from Egypt", "Vogts Villa",
     .album-year {
         font-size: 16px;
         line-height: 19px;
+    }
+    .play-btn {
+        width: 25px;
+        height: 25px;
+        left: 15px;
+        bottom: 35px;
     }
 }
 
 @media (max-width:1920px) {
     @for $i from 1 through 6 {
-        @include album-cover ($i, nth($album-covers, $i), 250px);
+        @include album-cover ($i, 250px);
     }
     .album-margin-right {
         margin-right: 50px;
@@ -76,11 +83,17 @@ $album-covers: "Brother", "Out of My Hands", "Letter from Egypt", "Vogts Villa",
         font-size: 16px;
         line-height: 19px;
     }
+    .play-btn {
+        width: 25px;
+        height: 25px;
+        left: 15px;
+        bottom: 35px;
+    }
 }
 
 @media (max-width:1280px) {
     @for $i from 1 through 6 {
-        @include album-cover ($i, nth($album-covers, $i), 230px);
+        @include album-cover ($i, 230px);
     }
     .album-margin-right {
         margin-right: 45px;
@@ -93,11 +106,17 @@ $album-covers: "Brother", "Out of My Hands", "Letter from Egypt", "Vogts Villa",
         font-size: 16px;
         line-height: 19px;
     }
+    .play-btn {
+        width: 23px;
+        height: 23px;
+        left: 13px;
+        bottom: 33px;
+    }
 }
 
 @media (max-width:1024px) {
     @for $i from 1 through 6 {
-        @include album-cover ($i, nth($album-covers, $i), 200px);
+        @include album-cover ($i, 200px);
     }
     .album-margin-right {
         margin-right: 40px;
@@ -110,11 +129,17 @@ $album-covers: "Brother", "Out of My Hands", "Letter from Egypt", "Vogts Villa",
         font-size: 15px;
         line-height: 18px;
     }
+    .play-btn {
+        width: 21px;
+        height: 21px;
+        left: 11px;
+        bottom: 31px;
+    }
 }
 
 @media (max-width:768px) {
     @for $i from 1 through 6 {
-        @include album-cover ($i, nth($album-covers, $i), 190px);
+        @include album-cover ($i, 190px);
     }
     .album-margin-right {
         margin-right: 35px;
@@ -127,11 +152,17 @@ $album-covers: "Brother", "Out of My Hands", "Letter from Egypt", "Vogts Villa",
         font-size: 14px;
         line-height: 17px;
     }
+    .play-btn {
+        width: 21px;
+        height: 21px;
+        left: 11px;
+        bottom: 31px;
+    }
 }
 
 @media (max-width:507px) {
     @for $i from 1 through 6 {
-        @include album-cover ($i, nth($album-covers, $i), 170px);
+        @include album-cover ($i, 170px);
     }
     .albums {
         justify-content: space-between;
@@ -147,11 +178,17 @@ $album-covers: "Brother", "Out of My Hands", "Letter from Egypt", "Vogts Villa",
         font-size: 14px;
         line-height: 16px;
     }
+    .play-btn {
+        width: 19px;
+        height: 19px;
+        left: 9px;
+        bottom: 29px;
+    }
 }
 
 @media (max-width:417px) {
     @for $i from 1 through 6 {
-        @include album-cover ($i, nth($album-covers, $i), 150px);
+        @include album-cover ($i, 150px);
     }
     .album-margin-right {
         margin-right: 0;
@@ -165,11 +202,17 @@ $album-covers: "Brother", "Out of My Hands", "Letter from Egypt", "Vogts Villa",
         font-size: 14px;
         line-height: 16px;
     }
+    .play-btn {
+        width: 17px;
+        height: 17px;
+        left: 7px;
+        bottom: 27px;
+    }
 }
 
 @media (max-width:377px) {
     @for $i from 1 through 6 {
-        @include album-cover ($i, nth($album-covers, $i), 130px);
+        @include album-cover ($i, 130px);
     }
     .album-margin-right {
         margin-right: 0;
@@ -182,6 +225,12 @@ $album-covers: "Brother", "Out of My Hands", "Letter from Egypt", "Vogts Villa",
     .album-year {
         font-size: 14px;
         line-height: 16px;
+    }
+    .play-btn {
+        width: 15px;
+        height: 15px;
+        left: 5px;
+        bottom: 25px;
     }
 }
 

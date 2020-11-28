@@ -76,21 +76,6 @@
     }
 }
 
-$icons: "Wild Seed", "Letter from Egypt", "Brother", "Wild Seed", "Letter from Egypt", "Out of My Hands";
-
-@mixin song-icon($i, $icon-name) {
-    .icon-#{$i} {
-        width: 55.3px;
-        height: 50px;
-        background-size: 55.3px 50px;
-        background-image: url("../images/#{$icon-name}.png");
-    }
-}
-
-@for $i from 1 through 6 {
-    @include song-icon ($i, nth($icons, $i));
-}
-
 .song-name {
     margin-left: 16.59px;
     margin-top: 7px;
